@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    <RelativeLayout
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+    	android:layout_height="50dp"
+    	android:background="#000" >
+    	
+        <TextView 
+            android:id="@+id/title_text"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="125dp"
+            android:gravity="center"
+            android:textColor="#fff"
+            android:textSize="20sp"
+            android:text="审核"
+             />
+    	
+    </RelativeLayout>
+    <LinearLayout 
+        
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        >
+        <TextView
+            
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textSize="24sp"
+            android:gravity="center"
+            android:text="临时编号:"/>
+        
+        <EditText
+            android:id="@+id/temporaryNumber"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textSize="24sp"
+            />
+	</LinearLayout>
+	
+    <LinearLayout 
+        
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        >
+        <TextView
+            
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textSize="24sp"
+            android:gravity="center"
+            android:text="被鉴定人:"/>
+        
+        <EditText
+            android:id="@+id/identifiedPerson"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textSize="24sp"
+            />
+	</LinearLayout>
+	
+    <LinearLayout 
+        
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        >
+        <TextView
+            
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textSize="24sp"
+            android:gravity="center"
+            android:text="鉴定科室:"/>
+        
+        <EditText
+            android:id="@+id/identificationDepartment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textSize="24sp"
+            />
+	</LinearLayout>
+	
+    <LinearLayout 
+        
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        >
+        <TextView
+            
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textSize="24sp"
+            android:gravity="center"
+            android:text="受理日期:"/>
+        
+        <EditText
+            android:id="@+id/acceptanceDate"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textSize="24sp"
+            />
+	</LinearLayout>
+	
+    <LinearLayout 
+        
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        >
+        <TextView
+            
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textSize="24sp"
+            android:gravity="center"
+            android:text="检材状态:"/>
+        
+        <EditText
+            android:id="@+id/detectionState"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textSize="24sp"
+            />
+	</LinearLayout>
+	
+    <LinearLayout 
+        
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        >
+        <TextView
+            
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textSize="24sp"
+            android:gravity="center"
+            android:text="案件状态:"/>
+        
+        <EditText
+            android:id="@+id/caseStatus"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textSize="24sp"
+            />
+	</LinearLayout>
+	
+    <LinearLayout 
+        
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        >
+        <TextView
+            
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textSize="24sp"
+            android:gravity="center"
+            android:text="案件退回:"/>
+        
+        <EditText
+            android:id="@+id/caseReturn"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textSize="24sp"
+            />
+	</LinearLayout>
+	
+    <LinearLayout 
+        
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        >
+        <TextView
+            
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textSize="24sp"
+            android:gravity="center"
+            android:text="缴费金额:"/>
+        
+        <EditText
+            android:id="@+id/paymentAmount"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textSize="24sp"
+            />
+	</LinearLayout>
+	
+    <LinearLayout 
+        
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        >
+        <TextView
+            
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textSize="24sp"
+            android:gravity="center"
+            android:text="缴费状态:"/>
+        
+        <EditText
+            android:id="@+id/paymentStatus"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textSize="24sp"
+            />
+	</LinearLayout>
+	
+    
+
+</LinearLayout>

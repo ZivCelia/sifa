@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    <RelativeLayout
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+    	android:layout_height="50dp"
+    	android:background="#000" >
+    	
+        <TextView 
+            android:id="@+id/title_text"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="125dp"
+            android:gravity="center"
+            android:textColor="#fff"
+            android:textSize="20sp"
+            android:text="预受理"
+             />
+    	
+    </RelativeLayout>
+    
+    <LinearLayout 
+        android:id="@+id/nameLine"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:layout_below="@id/title">
+        <TextView
+            
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textSize="24sp"
+            android:gravity="center"
+            android:text="        姓名:"/>
+        
+        <EditText
+            android:id="@+id/name"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textSize="24sp"
+            />
+	</LinearLayout>
+	
+    <LinearLayout 
+        android:id="@+id/telLine"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:layout_below="@id/nameLine">
+        <TextView
+            
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textSize="24sp"
+            android:gravity="center"
+            android:text="        电话:"/>
+        
+        <EditText
+            android:id="@+id/tel"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textSize="24sp"
+            />
+	</LinearLayout>
+	
+    <LinearLayout 
+        android:id="@+id/identificationContentLine"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:layout_below="@id/telLine">
+        <TextView
+            
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textSize="24sp"
+            android:gravity="center"
+            android:text="鉴定内容:"/>
+        
+        <EditText
+            android:id="@+id/identificationContent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textSize="24sp"
+            />
+	</LinearLayout>
+	
+    <LinearLayout 
+        android:id="@+id/surveyorReportLine"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:layout_below="@id/identificationContentLine">
+        <TextView
+            
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textSize="24sp"
+            android:gravity="center"
+            android:text="鉴定资料:"/>
+        
+        <Button
+            android:id="@+id/upload"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textSize="24sp"
+            android:text="上传"
+            android:background="#104E8B"
+            />
+	</LinearLayout>
+    
+    <Button
+            android:id="@+id/submit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="24sp"
+            android:text="提交"
+            android:background="#104E8B"
+            android:layout_alignParentBottom="true"
+            />
+    
+
+</RelativeLayout>

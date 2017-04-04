@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    
+    <RelativeLayout
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+    	android:layout_height="50dp"
+    	android:background="#000" >
+    	
+        <TextView 
+            android:id="@+id/title_text"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="125dp"
+            android:gravity="center"
+            android:textColor="#fff"
+            android:textSize="20sp"
+            android:text="案件延期" />
+    	
+    </RelativeLayout>
+    
+    <TextView
+        android:id="@+id/delayStatus"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="延期状态:"
+        android:layout_below="@id/title"
+        />
+    
+    <TextView
+        android:id="@+id/applyDelay"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="个人申请延期"
+        android:textSize="40sp"
+        android:gravity="center"
+        android:layout_below="@id/delayStatus"
+        />
+
+    <Button
+        android:id="@+id/yes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/applyDelay"
+        android:layout_marginLeft="70dp"
+        android:layout_marginTop="36dp"
+        android:text="是" />
+
+    <Button
+        android:id="@+id/no"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/yes"
+        android:layout_alignBottom="@+id/yes"
+        android:layout_marginLeft="55dp"
+        android:layout_toRightOf="@+id/yes"
+        android:text="否" />
+
+</RelativeLayout>

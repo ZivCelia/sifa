@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <RelativeLayout
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+    	android:layout_height="50dp"
+    	android:background="#000" >
+    	
+        <TextView 
+            android:id="@+id/title_text"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="15dp"
+            android:gravity="center"
+            android:textColor="#fff"
+            android:textSize="20sp"
+            android:text="登录" />"
+    	
+    </RelativeLayout>
+    
+    
+    
+     <LinearLayout 
+        android:id="@+id/accountLine"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:layout_marginTop="80dp">
+        <TextView
+            
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textSize="24sp"
+            android:gravity="center"
+            android:text="        账号:"/>
+        
+        <EditText
+            android:id="@+id/accountEdit"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textSize="24sp"
+            android:hint="请输入你的账号"/>"
+	</LinearLayout>
+	
+     <LinearLayout 
+        android:id="@+id/passwordLine"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:layout_below="@id/accountLine">
+        <TextView
+            
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textSize="24sp"
+            android:gravity="center"
+            android:text="        密码:"/>
+        
+        <EditText
+            android:id="@+id/passwordEdit"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textSize="24sp"
+            android:hint="请输入你的密码"/>
+	</LinearLayout>
+
+     <CheckBox
+         android:id="@+id/rememberPass"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_below="@id/passwordLine"
+         android:layout_centerHorizontal="true"
+         android:layout_marginTop="20dp"
+         android:text="记住密码" />
+     
+     <Button 
+         android:id="@+id/login"
+         android:layout_width="250dp"
+         android:layout_height="60dp"
+         android:layout_below="@id/rememberPass"
+         android:layout_centerHorizontal="true"
+         android:layout_marginTop="20dp"
+         android:background="#63B8FF"
+         android:textColor="#fff"
+         android:textSize="25dp"
+         android:text="登录" />
+     
+     <TextView
+         android:id="@+id/goToRegister"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_below="@id/login"
+         android:layout_centerHorizontal="true"
+         android:layout_marginTop="10dp"
+         android:textColor="#76EE00"
+         android:text="前往注册" />"
+
+</RelativeLayout>
