@@ -84,6 +84,59 @@ public class Main extends Activity{
 			}
 		});
 		
+		/*
+		 * 终止
+		 */
+		
+		termination.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				Intent intent = new Intent(Main.this,Termination.class);
+				startActivity(intent);
+			}
+		});
+		
+
+		
+		/*
+		 * 个人中心
+		 */
+		personalCenter.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				Intent intent = new Intent(Main.this,PersonalCenter.class);
+				startActivity(intent);
+			}
+		});
+		/*
+		 * 终止
+		 */
+	    closed.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				Intent intent = new Intent(Main.this,Closed.class);
+				startActivity(intent);
+				
+	}
+	    });
+	    /*
+	     * 案件查询
+	     */
+	    caseInquiry.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				Intent intent = new Intent(Main.this,Caseinquiry.class);
+				startActivity(intent);
+			}
+			});	
 		
 	}
 	

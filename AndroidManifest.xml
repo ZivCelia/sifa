@@ -10,7 +10,7 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@drawable/ic_launcher"
+        android:icon="@drawable/logo"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity android:name="com.example.judicialexpertise.Main" />
@@ -19,7 +19,12 @@
         <activity android:name="com.example.judicialexpertise.Examine" />
         <activity android:name="com.example.judicialexpertise.Delay" />
         <activity android:name="com.example.judicialexpertise.DelayApply" />
-        
+        <activity android:name="com.example.db.Test"></activity>
+        <activity android:name="com.example.judicialexpertise.PersonalCenter"></activity>
+        <activity android:name="com.example.judicialexpertise.Termination"></activity>
+        <activity android:name="com.example.judicialexpertise.Account"></activity>
+        <activity android:name="com.example.judicialexpertise.Caseinquiry"></activity>
+        <activity android:name="com.example.judicialexpertise.Closed"></activity>
         <activity
             android:name=".Login"
             android:label="@string/app_name" >

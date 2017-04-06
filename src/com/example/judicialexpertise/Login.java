@@ -3,9 +3,13 @@ package com.example.judicialexpertise;
 
 
 
+import com.example.db.MyDatabaseHelper;
+
 import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.view.View;
@@ -23,7 +27,7 @@ public class Login extends Activity{
 	
 	private SharedPreferences.Editor editor;
 	
-	private EditText accountEdit;
+	private EditText telEdit;
 	
 	private EditText passwordEdit;
 	
@@ -33,21 +37,26 @@ public class Login extends Activity{
 	
 	private TextView goToRegister;
 	
+	private MyDatabaseHelper dbHelper;
+	
+    
+	
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.login);
+		dbHelper = new MyDatabaseHelper(this,"JudicialExpertise.db",null,1);
 		pref = PreferenceManager.getDefaultSharedPreferences(this);
-		accountEdit = (EditText)findViewById(R.id.accountEdit);
+		telEdit = (EditText)findViewById(R.id.telEdit);
 		passwordEdit = (EditText)findViewById(R.id.passwordEdit);
 		login = (Button)findViewById(R.id.login);
 		rememberPass = (CheckBox)findViewById(R.id.rememberPass);
 		goToRegister = (TextView)findViewById(R.id.goToRegister);
 		boolean isRemember = pref.getBoolean("remember_password", false);
 		if (isRemember) {
-			String account = pref.getString("account", "");
+			String tel = pref.getString("tel", "");
 			String password = pref.getString("password", "");
-			accountEdit.setText(account);
+			telEdit.setText(tel);
 			passwordEdit.setText(password);
 			rememberPass.setChecked(true);
 		}
@@ -56,14 +65,13 @@ public class Login extends Activity{
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
-				String account = accountEdit.getText().toString();
+				String tel = telEdit.getText().toString();
 				String password = passwordEdit.getText().toString();
-				if(account.equals("admin")&&password.equals("123456")){
+				if(tel.equals("admin")&&password.equals("123456")){
 					editor = pref.edit();
-					
 					if (rememberPass.isChecked()) {
 						editor.putBoolean("remember_password", true);
-						editor.putString("account", account);
+						editor.putString("tel", tel);
 						editor.putString("password", password);
 						
 						
@@ -73,10 +81,9 @@ public class Login extends Activity{
 						
 
 					}
-					
 					editor.commit();
-					Toast.makeText(Login.this, "登录成功", Toast.LENGTH_SHORT).show();
 					Intent intent = new Intent(Login.this,Main.class);
+					Toast.makeText(Login.this, "登陆成功", Toast.LENGTH_SHORT).show();
 					startActivity(intent);
 					finish();
 				}else{
@@ -97,6 +104,20 @@ public class Login extends Activity{
 			}
 		});
 		
+		
+		
 	}
+	
+	//验证登录
+    public boolean login(String telnum,String password) {
+        SQLiteDatabase db = dbHelper.getWritableDatabase();
+        String sql = "select * from Admin where name=? and password=?";
+        Cursor cursor = db.rawQuery(sql, new String[] {telnum, password});
+        if (cursor.moveToFirst()) {
+            cursor.close();
+            return true;
+        }
+        return false;
+    }
 
 }

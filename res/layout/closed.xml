@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    <RelativeLayout
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+    	android:layout_height="50dp"
+    	android:background="#000" >
+    	
+        <TextView 
+            android:id="@+id/title_text"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="125dp"
+            android:gravity="center"
+            android:textColor="#fff"
+            android:textSize="20sp"
+            android:text="结案"
+             />
+    	
+    </RelativeLayout>
+    
+    <LinearLayout 
+        android:id="@+id/caseLine"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:layout_below="@id/title">
+        <TextView
+            
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textSize="24sp"
+            android:gravity="center"
+            android:text="案件情况："/>
+       
+        <Button
+            android:id="@+id/tell"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textSize="24sp"
+            android:text="通知"
+           
+            />
+	</LinearLayout>
+    
+        
+      
+
+    <Button
+            android:id="@+id/download"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="24sp"
+            android:text="文件下载"
+           
+            android:layout_alignParentBottom="true"
+            />
+    
+   
+
+	</RelativeLayout>

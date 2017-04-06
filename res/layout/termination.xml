@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    android:background="@drawable/beijing">
+    
+    <RelativeLayout
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+    	android:layout_height="50dp"
+    	android:background="#000" >
+    	
+        <TextView 
+            android:id="@+id/title_text"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="125dp"
+            android:gravity="center"
+            android:textColor="#fff"
+            android:textSize="20sp"
+            android:text="案件终止" />
+
+</RelativeLayout>
+    
+    <TextView
+        android:id="@+id/applyTermination"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/title"
+        android:layout_marginTop="15dp"
+        android:gravity="center"
+        android:text="是否申请案件终止"
+        android:textSize="30sp" />
+   
+    <Button
+        android:id="@+id/yes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/applyTermination"
+        android:layout_marginLeft="70dp"
+        android:layout_marginTop="36dp"
+        android:text="是" />
+
+    <Button
+        android:id="@+id/no"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/yes"
+        android:layout_alignBottom="@+id/yes"
+        android:layout_marginLeft="55dp"
+        android:layout_toRightOf="@+id/yes"
+        android:text="否" />
+
+  <TextView
+      android:id="@+id/attention"
+      android:layout_width="match_parent"
+      android:layout_height="50dp"
+      android:layout_alignParentBottom="true"
+      android:layout_alignParentLeft="true"
+      android:layout_marginBottom="78dp"
+      android:text="      注意：若是现在终止案件，根据规定您需要承担一定的费用！"
+      android:textColor="#ffff0000"
+      android:textSize="20sp" />
+
+</RelativeLayout>
